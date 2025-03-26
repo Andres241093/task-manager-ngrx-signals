@@ -1,0 +1,60 @@
+div {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Espaciado entre los elementos */
+mat-form-field {
+  width: 100%;
+}
+
+/* Botón Material personalizado */
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 40px;
+}
+
+button:hover {
+  background: #3700b3;
+}
+
+/* Estilo de la lista de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  margin-bottom: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #e0e0e0;
+}
+
+/* Checkbox con margen */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
