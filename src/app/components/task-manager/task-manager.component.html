@@ -1,0 +1,32 @@
+<div>
+  <h1>Lista de Tareas (NgRx Signals)</h1>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nueva tarea</mat-label>
+    <input [(ngModel)]="newTodo" matInput (keydown.enter)="addTodo()" />
+  </mat-form-field>
+
+  <!-- <button mat-raised-button color="primary" (click)="addTodo()">Agregar</button> -->
+
+  <mat-form-field appearance="outline">
+    <mat-label>Filtrar tarea</mat-label>
+    <mat-select (selectionChange)="setFilter($event.value)">
+      <mat-option value="all">Todas</mat-option>
+      <mat-option value="pending">Pendientes</mat-option>
+      <mat-option value="completed">Completadas</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <ul>
+    <li *ngFor="let todo of filteredTodos()">
+      <input
+        type="checkbox"
+        [checked]="todo.completed"
+        (change)="toggleTodo(todo.id)"
+      />
+      {{ todo.text }}
+    </li>
+  </ul>
+
+  <p>Tareas pendientes: {{ pendingCount() }}</p>
+</div>
