@@ -8,7 +8,7 @@ export const environment = {
     messagingSenderId: '524681137844',
     appId: '1:524681137844:web:599655fab359fedcda91e1',
     measurementId: 'G-N1XS2QFE76',
-    vapidKey:
-      'BCcoZFuFFU3EzBs2CbpFrWU_TGR3Z57C4UyK6gC4F6ior2cqCS-KzVXkwf8ulbGeCLielRPk-RPzb9Rb7uIP7xY',
   },
+  vapidKey:
+    'BCcoZFuFFU3EzBs2CbpFrWU_TGR3Z57C4UyK6gC4F6ior2cqCS-KzVXkwf8ulbGeCLielRPk-RPzb9Rb7uIP7xY',
 };

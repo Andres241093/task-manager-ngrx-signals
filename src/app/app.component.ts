@@ -38,17 +38,11 @@ export class AppComponent {
       if (permission === 'granted' && this.messaging) {
         console.log('Permiso concedido para notificaciones.');
         getToken(this.messaging, {
-          vapidKey:
-            'BCcoZFuFFU3EzBs2CbpFrWU_TGR3Z57C4UyK6gC4F6ior2cqCS-KzVXkwf8ulbGeCLielRPk-RPzb9Rb7uIP7xY',
+          vapidKey: environment.vapidKey,
         })
           .then((token) => {
             console.log('Token FCM:', token);
-            // Envía el token al backend
-            // fetch('http://localhost:3000/send-notification', {
-            //   method: 'POST',
-            //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify({ token }),
-            // });
+            // store token in backend
           })
           .catch((err) => console.error('Error al obtener el token:', err));
       } else {
